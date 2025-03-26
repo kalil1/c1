@@ -1,0 +1,22 @@
+<h1 class="mb-4">Weekly Calendar</h1>
+
+<%= week_calendar(events: @meetings) do |date, meetings| %>
+  <div class="mb-3 p-2 bg-light border rounded">
+    <strong><%= date.strftime("%A, %B %d") %></strong>
+    
+    <% meetings.each do |meeting| %>
+      <div class="card mt-2">
+        <div class="card-body">
+          <h5 class="card-title"><%= meeting.name %></h5>
+          <p class="card-text">
+            <strong>Start:</strong> <%= meeting.start_time.strftime("%A, %B %d at %I:%M %p") %><br>
+            <strong>End:</strong> <%= meeting.end_time.strftime("%I:%M %p") %>
+          </p>
+          <%= link_to "View Details", meeting_path(meeting), class: "btn btn-primary btn-sm" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<%= link_to "Back to Month View", meetings_path, class: "btn btn-secondary mt-4" %>

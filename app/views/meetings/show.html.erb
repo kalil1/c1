@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+      <h2><%= @meeting.name %></h2>
+    </div>
+    <div class="card-body">
+      <p><strong>Start Time:</strong> <%= @meeting.start_time.strftime("%A, %B %d at %I:%M %p") %></p>
+      <p><strong>End Time:</strong> <%= @meeting.end_time.strftime("%I:%M %p") %></p>
+      <p><strong>Description:</strong> This is a placeholder for additional meeting details.</p>
+      <%= link_to "Back to Weekly Calendar", week_meetings_path(start_date: @meeting.start_time.beginning_of_week), class: "btn btn-secondary" %>
+    </div>
+  </div>
+</div>
