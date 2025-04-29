@@ -8,6 +8,7 @@
       <p><strong>End Time:</strong> <%= @meeting.end_time.strftime("%I:%M %p") %></p>
       <p><strong>Description:</strong> This is a placeholder for additional meeting details.</p>
       <%= link_to "Back to Weekly Calendar", week_meetings_path(start_date: @meeting.start_time.beginning_of_week), class: "btn btn-secondary" %>
+      <img src="<%= @meeting.ep.url %>" alt="edit" />
     </div>
   </div>
 </div>

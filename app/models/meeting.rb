@@ -3,6 +3,7 @@ class Meeting < ApplicationRecord
     validates :start_time, presence: true
     validates :end_time, presence: true
     validate :no_overlapping_meetings
+    mount_uploader :ep, EpUploader
   
     private
   
