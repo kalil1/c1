@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_03_26_030351) do
+ActiveRecord::Schema[7.0].define(version: 2025_04_29_030635) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_03_26_030351) do
     t.datetime "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.json "ep"
     t.index "int8range((date_part('epoch'::text, start_time))::bigint, (date_part('epoch'::text, end_time))::bigint)", name: "no_overlapping_meetings", using: :gist
   end
 

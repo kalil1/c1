@@ -27,6 +27,10 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem "image_processing", "~> 1.0"
+
+gem 'carrierwave', '~> 3.0'
+
 gem 'concurrent-ruby', '1.3.4'
 
 gem "simple_calendar"
