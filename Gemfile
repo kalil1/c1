@@ -78,3 +78,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'mini_magick'
+gem 'aws-sdk-rails'
+gem 'figaro'
+gem 'carrierwave-aws'
+gem "dotenv-rails", "~> 3.1"
