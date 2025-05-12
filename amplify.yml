@@ -5,7 +5,7 @@ frontend:
       commands:
         - gem install bundler
         - rm -f Gemfile.lock
-        - yum install postgresql-devel
+        - sudo yum install postgresql-devel
         - bundle install
         - yarn install
         - rails db:seed
