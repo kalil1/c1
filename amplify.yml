@@ -4,6 +4,10 @@ frontend:
     preBuild:
       commands:
         - gem install bundler
+        - sudo apt install libpq-dev
+        - sudo yum install postgresql-devel
+        - sudo zypper in postgresql-devel
+        - sudo pacman -S postgresql-libs
         - bundle install
         - yarn install
         - rails db:seed
