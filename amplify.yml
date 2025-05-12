@@ -5,8 +5,10 @@ frontend:
       commands:
         - gem install bundler
         - rm -f Gemfile.lock
-        - sudo yum update && sudo yum install -y build-essential
-        - sudo yum update && sudo yum install ruby-dev
+        - sudo yum install postgresql-devel python3-devel
+        - pip install wheel
+        - pip install psycopg2
+        - sudo amazon-linux-extras install postgresql10
         - sudo yum install libpq-dev
         - bundle install
         - yarn install
