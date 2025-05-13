@@ -4,7 +4,7 @@ frontend:
     preBuild:
       commands:
         - npm install -g yarn
-        - sudo yum install -y postgresql-devel gcc gcc-c++ make ruby ruby-devel nodejs yarn
+        - sudo yum install -y postgresql-devel gcc gcc-c++ make ruby ruby-devel nodejs
         - gem install bundler
         - rm -f Gemfile.lock
         - bundle install
