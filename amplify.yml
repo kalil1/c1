@@ -3,6 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - yum install -y postgresql-devel gcc gcc-c++ make ruby ruby-devel nodejs yarn
         - gem install bundler
         - rm -f Gemfile.lock
         - bundle install
