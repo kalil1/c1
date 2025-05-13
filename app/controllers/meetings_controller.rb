@@ -3,7 +3,7 @@ class MeetingsController < ApplicationController
 
   # GET /meetings or /meetings.json
   def index
-    @meetings = Meeting.all
+    render json: Meeting.all.to_json 
   end
 
   # GET /meetings/1 or /meetings/1.json
