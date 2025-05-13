@@ -7,11 +7,11 @@ frontend:
         - rm -f Gemfile.lock
         - bundle install
         - yarn install
-        - rails db:seed
     build:
       commands:
         - RAILS_ENV=production bundle exec rails assets:precompile
         - RAILS_ENV=production bundle exec rails db:migrate
+        - RAILS_ENV=production bundle exec rails db:seed
   artifacts:
     baseDirectory: public
     files:
