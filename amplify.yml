@@ -12,7 +12,6 @@ frontend:
     build:
       commands:
         - RAILS_ENV=production bundle exec rails assets:precompile
-        - RAILS_ENV=production bundle exec rails db:setup
         - RAILS_ENV=production bundle exec rails db:migrate
         - RAILS_ENV=production bundle exec rails db:seed
   artifacts:
